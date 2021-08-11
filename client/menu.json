@@ -1,0 +1,28 @@
+{   
+    "menu" : [
+        {"genre" : 0, "num" : 1, "name" : "チャーハン", "img" : "rice_00.jpg", "price" : 400},
+        {"genre" : 0, "num" : 11, "name" : "味噌ラーメン", "img" : "noodles_05.jpg", "price" : 500},
+        {"genre" : 0, "num" : 17, "name" : "焼鮭", "img" : "otumami_04.jpg", "price" : 300},
+        {"genre" : 1, "num" : 1, "name" : "チャーハン", "img" : "rice_00.jpg", "price" : 400},
+        {"genre" : 1, "num" : 2, "name" : "天津飯", "img" : "rice_01.jpg", "price" : 600},
+        {"genre" : 1, "num" : 3, "name" : "天丼<br>(味噌汁付)", "img" : "rice_02.jpg", "price" : 500},
+        {"genre" : 1, "num" : 4, "name" : "カツ丼<br>(味噌汁付)", "img" : "rice_03.jpg", "price" : 500},
+        {"genre" : 1, "num" : 5, "name" : "ご飯", "img" : "rice_04.jpg", "price" : 200},
+        {"genre" : 2, "num" : 6, "name" : "しょうゆラーメン", "img" : "noodles_00.jpg", "price" : 450},
+        {"genre" : 2, "num" : 7, "name" : "チャーシューメン", "img" : "noodles_01.jpg", "price" : 600},
+        {"genre" : 2, "num" : 8, "name" : "五目ラーメン", "img" : "noodles_02.jpg", "price" : 550},
+        {"genre" : 2, "num" : 9, "name" : "タンメン", "img" : "noodles_03.jpg", "price" : 550},
+        {"genre" : 2, "num" : 10, "name" : "こってりラーメン", "img" : "noodles_04.jpg", "price" : 500},
+        {"genre" : 2, "num" : 11, "name" : "味噌ラーメン", "img" : "noodles_05.jpg", "price" : 500},
+        {"genre" : 2, "num" : 12, "name" : "トムヤンクンラーメン<br>(サラダ付)", "img" : "noodles_06.jpg", "price" : 700},
+        {"genre" : 3, "num" : 13, "name" : "パーティー<br>おつまみセット<br>(3~4人前)", "img" : "otumami_00.jpg", "price" : 1200},
+        {"genre" : 3, "num" : 14, "name" : "お一人晩酌セット", "img" : "otumami_01.jpg", "price" : 500},
+        {"genre" : 3, "num" : 15, "name" : "柿の種", "img" : "otumami_02.jpg", "price" : 150},
+        {"genre" : 3, "num" : 16, "name" : "冷奴", "img" : "otumami_03.jpg", "price" : 250},
+        {"genre" : 3, "num" : 17, "name" : "焼鮭", "img" : "otumami_04.jpg", "price" : 300},
+        {"genre" : 4, "num" : 18, "name" : "ビール", "img" : "drink_00.jpg", "price" : 300},
+        {"genre" : 4, "num" : 19, "name" : "野菜ジュース", "img" : "drink_01.jpg", "price" : 200},
+        {"genre" : 4, "num" : 20, "name" : "みかんジュース", "img" : "drink_01.jpg", "price" : 999}
+    ]
+   
+}

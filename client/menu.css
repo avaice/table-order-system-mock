@@ -1,0 +1,109 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFEEFF;
+  height: 100%;
+  margin: 5px;
+  user-select:none;
+-webkit-user-select:none;
+-ms-user-select: none;
+-moz-user-select:none;
+-khtml-user-select:none;
+-webkit-user-drag:none;
+-khtml-user-drag:none;
+/*font-family: "Hiragino Maru Gothic ProN";*/
+}
+
+.itemlist {
+
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.item {
+
+  width:30vw;
+  height: calc(30vw*0.75);
+  margin: 2vh 1.2vw;
+  background-color: white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .5);
+  position: relative;
+  
+
+}
+
+.clickanim {
+  animation: poyoyon2 0.5s ease-in-out 1 forwards;
+}
+
+.item .title {
+  color: #fff;
+  font-size: 2.5vw; 
+  /*background-color: rgba(0, 0, 0, 0.20);*/
+  text-shadow: 4px 6px 6px black;
+  position: absolute;
+  right: 1vw;
+  bottom: -2vh;
+  text-align: right;
+  font-weight:bold;
+}
+
+@media screen and (max-width: 480px) {
+
+.item .title {
+  font-size: 4vw; 
+}
+
+.item {
+
+  width:45vw;
+  height: calc(45vw*0.75);
+}
+
+}
+
+
+::-webkit-scrollbar {
+  width: 1vw;
+  height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow:0 0 0.5vw #C0C0C0 inset ;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #808080;
+}
+
+
+
+@keyframes poyoyon2 {
+  0%  {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  15% {
+    transform: scale(0.98, 0.9) translate(0, 5px);
+  }
+  30% {
+    transform: scale(1.02, 1.0) translate(0, 8px);
+  }
+  50% {transform: scale(0.98, 1.05) translate(0, -8px);
+  }
+  70% {
+    transform: scale(1.0, 0.9) translate(0, 5px);
+  }
+  100% {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  0%, 100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>テーブルオーダー</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"><!--Webアプリ対応-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="icon256.png" />
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    
+</head>
+<body>
+    <div class="display">
+        <!--上のメニュータブ，店名，時刻表示などの部分-->
+        <header id="header" class="header">
+            <div class="menu_tab" id="menu_tab">
+            </div>
+            <div class="information">
+                <center>
+                    <a class="info_text" id="name">店舗名</a>
+                    <p class="info_text" id="RealtimeClockArea">時刻を取得しています...</p>
+                </center>
+
+            </div>
+        </header>
+
+        <br>
+
+        <!--メニューの部分-->
+        <main id="menu" class="menu">
+            <iframe id="menu_contents"
+            title="menu"
+            width=100%
+            height=100%
+            src="menu.html"
+            style="border: none"></iframe>
+        </main>
+
+        <!--下側にある注文ボタン等の部分-->
+        <footer id="footer" class="bottombar">
+            <a class="mid_text" id="tablenum">---</a>
+            <a href="#" class="btn-square-shadow spOnly" onclick="setting()">設定</a>
+            <a href="#" class="btn-square-shadow" onclick="viewRecent()">履歴</a>
+            <a href="#modal01" class="btn-square-shadow" id="cartDisp" onclick="viewCart()">カート(-点)</a>
+            <!--<a href="#" class="btn-square-shadow" onclick="cartSend()">注文</a>-->
+            
+        </footer>
+
+        <div class="cart_bg" id="cart_bg" onclick="cartBack()"></div>
+
+        <div class="cart" id="cart">
+            <div class="cart_title" id="cart_title">カートの中身</div>
+            <div class="cart_list" id="cart_list">
+                <!--ここにカートの中身が追加されます(main.js)-->
+            </div>
+            <div class="cart_bottom">
+                <a class="large_text" id="cart_total">￥10,000</a>
+                <a href="#" class="btn-cart-back" onclick="cartBack()">戻る</a>
+                <a href="#" class="btn-cart-order" onclick="cartSend()">注文</a>
+            </div>
+            
+        </div>
+
+        <div class="recent" id="recent">
+            <div class="cart_title" id="cart_title">注文履歴</div>
+            <div class="recent_top"><a class="large_text" id="order_total">￥10,000</a></div>
+            <div class="recent_list" id="recent_list">
+                <!--ここに注文履歴が追加されます(main.js)-->
+            </div>
+            <div class="cart_bottom">
+                <a href="#" class="btn-cart-back" onclick="cartBack()">戻る</a>
+                <a href="#" class="btn-cart-order" onclick="">お会計</a>
+            </div>
+            
+        </div>
+
+
+        <div class="cart" id="cart_success">
+            <div class="cart_title">注文</div>
+            <div class="cart_success_middle">
+                <center>
+                    <img src="resource/success.svg" class="success_icon" id="success_icon" style="display:none;"><br>
+                    <a class="mid_text" id="order_send_text">しばらくお待ちください...</a>
+                </center>
+            </div>
+            <div class="cart_bottom">
+                <a href="#" class="btn-cart-back" onclick="cartBack()" id="orderBack" style="display:none;">戻る</a>
+            </div>
+            
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>

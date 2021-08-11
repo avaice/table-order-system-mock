@@ -1,0 +1,453 @@
+﻿/*高さいっぱいまで広げる、縦向きにだけ少し間隔あける、スクロールさせない*/
+html, body { height:100%; margin:0px 0.2vh; overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Hiragino Maru Gothic ProN";
+}
+
+
+body {
+  background-color: #FFEEFF;
+  padding: 0;
+}
+
+.display {
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0px;
+  margin: 0px;
+}
+
+
+
+.menu_tab {
+  width: 75%;
+  flex-direction: row;
+  text-align: left; 
+  flex-wrap: wrap;
+  display: flex;
+  float: left;
+  margin: 2px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .5);
+  background-color: rgba(5, 05, 0, 0.1);
+}
+
+.mtab_class {
+  /*width: calc(100%/4);*/
+  background-color: darkgrey;
+  /*line-height: 8vh;*/
+  font-size: 2.2vw;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+
+input[name="mtab_name"] {
+  display: none;
+}
+ 
+input:checked + .mtab_class {
+  background-color: cadetblue;
+  color: aliceblue;
+}
+
+.information {
+  font-size: 1.5vw;
+}
+.info_text {
+  margin: 0;
+}
+
+
+.menu {
+ height:80%;
+ width: 100%;
+ margin: 2px;
+ text-align: center;
+}
+
+.bottombar {
+
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+.price_label {
+  font-size: 3vw;
+  font-weight:bold;
+}
+
+.btn-square-shadow {
+  margin: 1% 1vw;
+  display: inline-block;
+  padding: 1% 5vw;
+  height: 3.5vh;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 0.5vh #627295;
+  border-radius: 3px;
+  line-height: 4vh;
+  font-size: 3vw;
+
+}
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+  
+}
+
+
+.btn-del {
+  margin: 2% 1vw;
+  display: inline-block;
+  padding: 2% 5vw;
+  height: 3vh;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  background: #ff134e;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 0.5vh #ff4d7a;
+  border-radius: 3px;
+  line-height: 4vh;
+  font-size: 2vw;
+
+}
+.btn-del:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  
+  
+}
+
+.btn-cart-back {
+  
+  margin: 1% 1vw;
+  display: inline-block;
+  padding: 1% 5vw;
+  height: 6vh;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 0.5vh #627295;
+  border-radius: 3px;
+  line-height: 4.5vmax;
+  font-size: 3vmax;
+
+}
+.btn-cart-back:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  
+  
+}
+
+.btn-cart-order {
+  
+  margin: 1% 1vw;
+  display: inline-block;
+  padding: 1% 5vw;
+  height: 6vh;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  background: #5daa53;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 0.5vh #6a9562;
+  border-radius: 3px;
+  line-height: 4.5vmax;
+  font-size: 3vmax;
+
+}
+.btn-cart-order:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  
+  
+}
+
+
+.cart_bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.cart_bg {
+  display: none;
+  position:absolute;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 2147483650;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.recent {
+  display: none;
+  position:absolute;
+  background: rgba(255, 255, 255, 0.7);
+  left: 15%;
+  top: 15%;
+  height: 70%;
+  width: 70%;
+  z-index: 2147483651;
+
+}
+
+.recent_list {
+
+  position:absolute;
+  left: 10%;
+  top: 25%;
+  height: 60%;
+  overflow: hidden;
+  width: 80%;
+  
+}
+
+.recent_top {
+
+  position:absolute;
+  left: 10%;
+  top: 15%;
+  height: 10%;
+  width: 80%;
+  
+
+}
+
+table th ,td {
+  border:1px solid;
+  width: 100%;
+  }
+   
+/*　スクロールバーの実装 */
+.table_sticky {
+  display: block;
+  overflow-y: scroll;
+  height:100%;
+  border-collapse: collapse;
+}
+.table_sticky thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: gold;
+  border-top:#FFFFFF;
+}
+
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+
+.cart {
+  display: none;
+  position:absolute;
+  background: rgba(255, 255, 255, 0.7);
+  left: 15%;
+  top: 15%;
+  height: 70%;
+  width: 70%;
+  z-index: 2147483651;
+
+}
+
+.cart_list {
+
+  position:absolute;
+  left: 10%;
+  top: 15%;
+  height: 70%;
+  width: 80%;
+  overflow: scroll;
+
+}
+
+.cart_item {
+
+  height: 30%;
+  width: 99%;
+  margin: 1px 0px;
+  border: thin solid darkgray;
+
+  text-align: left; 
+  flex-wrap: wrap;
+  display: flex;
+
+}
+
+.cart_title {
+  font-size: 6vmin;
+  font-weight:bold;
+  text-align:center;
+  text-shadow: 4px 6px 6px gray;
+
+}
+
+.cart_i_img {
+
+  height: 100%;
+
+}
+
+.cart_i_title {
+
+  font-size: 3vmin;
+}
+
+.cart_i_main {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+}
+
+.cart_item {
+
+
+  text-align: left; 
+  flex-wrap: wrap;
+  display: flex;
+
+}
+
+
+.mid_text {
+  font-size: 3vmin;
+}
+.large_text {
+  font-size: 5vmin;
+}
+.icon {
+  vertical-align: bottom;
+  margin: 1vh 1vw;
+  height: 5vh;
+}
+.success_icon {
+  margin: 5vh 0vw;
+  height: 20vh;
+}
+
+@media screen and (min-width: 769px) {
+  .spOnly {
+    display:none;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+.information {
+  display: none;
+}
+.menu_tab {
+  width: 100%;
+}
+.price_label {
+  font-size: 4vw;
+}
+.cart_i_img {
+  display:none;
+}
+.cart_title {
+
+  font-size: 7vmin;
+}
+
+.cart_i_title {
+  font-size: 5vmin;
+}
+
+.cart_item {
+
+  height: 25%;
+}
+
+.mid_text {
+  font-size: 5vmin;
+}
+.large_text {
+  font-size: 6vmin;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+
+.mtab_class {
+  font-size: 4vw;
+}
+.bottombar {
+  height: 10%;
+  text-align: center;
+}
+
+.btn-square-shadow {
+  height: 7vh;
+  font-size: 5vw;
+  line-height: 7vh;
+}
+.btn-del {
+  font-size: 4vw;
+}
+
+.price_label {
+  display: none;
+}
+
+.cart {
+  
+  left: 8%;
+  top: 8%;
+  height: 84%;
+  width: 84%;
+}
+.cart_title {
+
+  font-size: 10vmin;
+}
+.btn-cart-back {
+  line-height: 6vmax;
+}
+.btn-cart-order {
+  line-height: 6vmax;
+}
+
+
+}
+
+
