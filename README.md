@@ -1,6 +1,7 @@
+![image](https://user-images.githubusercontent.com/80768507/128973864-593cda0d-0494-4cb0-9733-6841bb066579.png)
 # Description
 Technical test of Table order system<br>
-テーブルオーダーシステム開発に向けて練習用に作ったものです。
+テーブルオーダーシステム開発に向けてテストで作ったものです。練習で作ったものなので，ソースコード（特にサーバー）の処理にはあまりよろしくない記述が多く含まれていると思います。
 
 # License
 index.html main.js menu.css style.cssの4ファイルに限りGNU General Public Licenseライセンス形態とします。<br>
